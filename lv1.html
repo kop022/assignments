@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lv.1</title>
+    <style>
+        span {
+            background-color: black;
+        }
+
+        #btn {
+            width: 70px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+<p>我用什么才能留住你</p>
+<p>我用什么才能留住你</p>
+<p>我给你瘦落的街道、<span class="click1">绝望的落日</span>、荒郊的月亮。</p>
+<p>我给你一个久久地望着孤月的人的悲哀。</p>
+<p>我给你我已<span class="click2">死去</span>的祖辈，后人们用大理石祭奠的先魂</p>
+<p>我父亲的父亲，<span class="click3">阵亡</span>于布宜诺斯艾利斯的边境，两颗子弹射穿了他的胸膛，死的时候蓄着胡子，<span class="click4">尸体</span>被士兵们用牛皮裹起；
+</p>
+<p>我母亲的祖父——那年才二十四岁——在秘鲁率领三百人冲锋，如今都成了消失的马背上的<span class="click5">亡魂</span>。</p>
+<p>我给你我的书中所能蕴含的一切<span class="click6">悟力</span>，以及我生活中所能有的男子气概和幽默。</p>
+<p>我给你一个从未有过信仰的人的忠诚。</p>
+<p>我给你我设法保全的我自己的<span class="click7">核心</span>——不营字造句，不和梦交易，不被时间、欢乐和<span class="click8">逆境</span>触动的核心。</p>
+<p>我给你早在你出生前多年的一个傍晚看到的一朵<span class="click9">黄玫瑰</span>的记忆。</p>
+<p>我给你关于你<span class="click10">生命</span>的诠释，关于你自己的理论，你的真实而惊人的存在。</p>
+<p>我给你我的寂寞、我的黑暗、我心的饥渴；我试图用困惑、<span class="click11">危险</span>、失败来打动你。</p>
+
+<button id="btn" value="black">让我康康</button>
+
+
+<script>
+    var btn = document.getElementById('btn');
+    // let spans = document.getElementsByClassName('.span');
+    btn.onclick = function () {
+        if(this.value =="black"){
+            for(i=1;i<=11;i++){
+                document.querySelector('.click'+i).style.backgroundColor = 'white';
+            }
+            this.value="white";
+        }
+        else if(this.value =="white"){
+            for(i=1;i<=11;i++){
+                document.querySelector('.click'+i).style.backgroundColor = 'black';
+            }
+            this.value="black";
+        }
+    }
+    
+</script>
+</body>
+
+</html>
