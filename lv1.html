@@ -35,7 +35,7 @@
 <p>我给你我的寂寞、我的黑暗、我心的饥渴；我试图用困惑、<span class="click11">危险</span>、失败来打动你。</p>
 
 <button id="btn" value="black">让我康康</button>
-
+<!-- 给按钮赋值 -->
 
 <script>
     var btn = document.getElementById('btn');
@@ -44,8 +44,10 @@
         if(this.value =="black"){
             for(i=1;i<=11;i++){
                 document.querySelector('.click'+i).style.backgroundColor = 'white';
+                //获取文档中 class="clicki" 的<span>元素并改变其背景颜色
             }
             this.value="white";
+            //改变按钮的赋值让下一次点击进入另外一选项
         }
         else if(this.value =="white"){
             for(i=1;i<=11;i++){
