@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lv2</title>
+</head>
+
+<body>
+
+    <div align="center">
+        <b>请选择您的爱好</b>
+        <br />
+    </div>
+
+    <div id="divlist" align="center">
+        <input type="checkbox" value="内卷" name="involution">内卷
+        <input type="checkbox" value="疯狂内卷" name="involution">疯狂内卷
+        <input type="checkbox" value="拼命内卷" name="involution">拼命内卷
+        <input type="checkbox" value="使劲内卷" name="involution">使劲内卷
+        <br />
+        <input type="button" value="全选" id="btn1">
+        <input type="button" value="全不选" id="btn2">
+        <input type="button" value="反选" id="btn3">
+    </div>
+    <script>
+        var involution=document.getElementsByName("involution");
+
+        var btn1=document.getElementById("btn1");
+        btn1.onclick=function(){
+            for(i=0;i<involution.length;i++){
+                //设置4个多选框为选中状态
+                //alert(involution[i].checked);
+                involution[i].checked=true;
+            }
+            //btn1.checked=true;
+
+        };
+
+        var btn2=document.getElementById("btn2");
+        btn2.onclick=function(){
+
+            for(i=0;i<involution.length;i++){
+                involution[i].checked=false;
+            }
+            //btn2.checked=false;
+
+        }
+
+        var btn3=document.getElementById("btn3");
+        btn3.onclick=function(){
+
+            for(i=0;i<involution.length;i++){
+                involution[i].checked=!involution[i].checked;
+                //!对于 false 语句返回 true，对于 true 语句返回 false,从而实现反选
+            }
+            //btn3.checked=true;
+        }
+    </script>
+</body>
+
+</html>
