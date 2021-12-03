@@ -28,7 +28,7 @@
                 typing.innerHTML = lyrics.slice(0, i++);
                 setTimeout("typeWriter()", 100)//递归
             } else {
-                reject(typing.innerHTML = lyrics)
+                typing.innerHTML = lyrics
             }
         }))
     }
