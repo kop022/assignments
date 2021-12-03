@@ -24,6 +24,7 @@
     function typeWriter() {
         const typing = document.getElementById('typing')
         return new Promise(((resolve, reject) => {
+            //doge
             if (i <= lyrics.length) {
                 typing.innerHTML = lyrics.slice(0, i++);
                 setTimeout("typeWriter()", 100)//递归
