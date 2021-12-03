@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lv1-2</title>
+    <style>
+        #circle-1 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: lightseagreen;
+            position: relative;
+            animation: move 3s;
+            animation-fill-mode: forwards;
+            -webkit-animation: move 3s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        #circle-2 {
+            width: 100px;
+            height: 100px;
+            background-color: chocolate;
+            border-radius: 50%;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+
+        #circle-3 {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            border-radius: 50%;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateX(0px);
+            }
+
+            to {
+                transform: translateX(321px);
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="circle-1"></div>
+<div id="circle-2"></div>
+<div id="circle-3"></div>
+
+<script>
+    let c1 = document.getElementById('circle-1');
+    let c2 = document.getElementById('circle-2');
+    let c3 = document.getElementById('circle-3');
+
+    async function startMove() {
+        await op1();
+        await op2();
+        // resolve();
+    }
+
+    startMove();
+
+    function op1() {
+        setTimeout(() => {
+            c2.style.animationName = 'move';
+            // resolve();
+        }, 2000);
+    }
+
+    function op2() {
+        setTimeout(() => {
+            c3.style.animationName = 'move';
+            // resolve();
+        }, 4000);
+    }
+</script>
+</body>
+</html>
